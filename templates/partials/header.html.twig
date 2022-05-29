@@ -32,9 +32,9 @@
 			</ul>
 			<div class="navbar-item-custom">
 				{% if app.user %}
-					<a href="{{path('app_home')}}">Mon compte<small>({{app.user.firstname}})</small>
+					 <a href="{{path('account')}}">Mon compte<small>({{app.user.firstname}})</small>
 					</a>
-					|
+					| 
 					<a href="{{path('app_logout')}}">Déconnexion</a>
 				{% else %}
 					<a href="{{path('app_login')}}">Connexion</a>
