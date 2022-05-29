@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="node_modules/magic.css/dist/magic.css">
+		<title>CAMARA || Daouda 
+			{% block title %}{% endblock %}
+		</title>
+		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.5.0/journal/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+		{# bg header en journal dans le cdn : superhero #}
+
+		
+		{% block stylesheets %}
+		{% endblock %}{% block javascripts %}
+	{% endblock %}
+	</head>
+
+
+		<body>
+		{% include "partials/header.html.twig" %}{% block body %}
+		{% endblock %}
+
+
+		{% include "partials/footer.html.twig" %}
+	{% include "partials/script.html.twig" %}
+</body></html>

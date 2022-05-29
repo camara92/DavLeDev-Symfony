@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="animate__animated animate__bounce text-center bg-info text-white p-5 my-5 container"> Liste des technologies </div>
+
+<div class=" row flex-lg-row flex-xl-row flex-column  ">
+
+		{% for data in categorie %}
+
+			{% include "categories/card.categorie.html.twig"  %}
+
+		{% endfor %}
+
+	</div> 
+
+{% endblock %}

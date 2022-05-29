@@ -1,0 +1,47 @@
+{# daouda #}
+<header>
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark animate__animated animate__bounce">
+		<i class="text-white bold fas fa-home"></i>
+		<a class="navbar-brand" href="{{path('app_home')}}">
+			Accueil</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="{{path('app_projects')}}">Mes projets
+					</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="{{path('app_categories')}}">Technologie
+					</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="http://127.0.0.1:8000/api">GoTo API</a>
+				</li>
+			<li class="nav-item active">
+					<a class="text-danger bold shadow nav-link" href="http://127.0.0.1:8000/admin">EspaceAdmin</a>
+				</li>
+{# http://127.0.0.1:8000/admin #}
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Contacts</a>
+				</li>
+
+
+			</ul>
+			<div class="navbar-item-custom">
+				{% if app.user %}
+					<a href="{{path('app_home')}}">Mon compte<small>({{app.user.firstname}})</small>
+					</a>
+					|
+					<a href="{{path('app_logout')}}">Déconnexion</a>
+				{% else %}
+					<a href="{{path('app_login')}}">Connexion</a>
+					|
+					<a href="{{path('app_register')}}">Inscrption</a>
+				{% endif %}
+			</div>
+		</div>
+	</nav>
+	<br><br><br></header>

@@ -1,0 +1,30 @@
+<div class="col-xl-3 col-lx-3 col-md-6 col-sm-12 m-auto w-75 container text-center">
+	<div class="card bg-light my-5 shadow container">
+		<h3 class="card-header bg-dark text-white shadow">{{data.projectname | title}}</h3>
+		<p class="card-text">{{data.content}}</p>
+		<p class="card-text">
+			<img height="150px" width="200" class="rounded-circle border border-success m-2" src="{{data.image}}" alt="Card image"></p>
+		<div class="card-body">
+			<p class="card-text">Projet réalisé :
+				{{data.categorie }}
+			</p>
+			<p class="card-text">Technologie utilisée :
+				{{data.techno}}
+			</p>
+
+			<div class="my-3">
+				<p class="card-link">Date de début :
+					{{data.datedebut | date}}
+					=> Date de fin :
+					{{data.datefin | date}}
+				</p>
+			</div>
+			<a href="{{data.LienGit}}" class="btn btn-success rounded">➡️Git</a>
+		</div>
+		<div class="card-footer text-muted">
+			<p class="card-text">Auteur :
+				{{data.author}}
+			</p>
+		</div>
+	</div>
+</div>

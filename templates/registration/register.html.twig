@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CAMARA || Inscription
+{% endblock %}
+
+{% block body %}
+
+
+	<h1  class="container xxx-large text-center bg-info shadow text-white p-4 shadow bold my-5 animate__animated animate__bounce">|| Inscription ||</h1>
+
+	<div class="container bg-info my-5 text-white my-2">
+	
+			{{ form_start(registrationForm, {"attr": {"class": "container"}}) }}
+				{{ form_row(registrationForm.firstname , {"attr": {"class": "container"}}) }}
+					{{ form_row(registrationForm.lastname, {"attr": {"class": "container"}}) }}
+			{{ form_row(registrationForm.email , {"attr": {"class": "container"}}) }}
+			{{ form_row(registrationForm.plainPassword, {"attr": {"class": "container"}}) }}
+		
+	
+			<button type="submit" class="btn btn-success container my-2 p-2">S'inscrire</button>
+			{{ form_end(registrationForm) }}
+	
+		</div>
+	
+
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="animate__animated animate__bounce text-center bg-info text-white p-2 my-5"> Daouda CAMARA </div>
+	<div class="jumbotron text-center my-5 shadow">
+		<h1 class="display-4">Bienvenue sur
+			<span class="text-success">Atlas   !</span>
+		</h1>
+		<p class="lead">Ici ça parle de code, langages et technos de demain
+		</p>
+		<hr class="my-4">
+		<p>Retrouvez nos derniers articles sur les technos les plus hype du moment !</p>
+		<p class="lead">
+			<a class="btn btn-primary btn-lg shadow" href="#" role="button">
+				&lt;/&gt; Actualités &lt;/&gt;
+			</a>
+		</p>
+	</div>
+	
+	
+	
+
+
+<div class=" row flex-lg-row flex-xl-row flex-column ">
+
+		{% for data in project %}
+
+			{% include "projects/card.project.html.twig"  %}
+
+		{% endfor %}
+
+	</div> 
+
+{% endblock %}
